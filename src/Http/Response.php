@@ -86,6 +86,14 @@ class Response
     }
 
     /**
+     * @return array
+     */
+    public function jsonDecodeBody(): array
+    {
+        return json_decode($this->body, true);
+    }
+
+    /**
      * @inheritdoc
      */
     public function __toString()

@@ -32,4 +32,34 @@ trait Headers
 
         return $this;
     }
+
+    /**
+     * @return $this
+     */
+    public function formContent()
+    {
+        $this->headers['Content-Type'] = 'application/x-www-form-urlencoded';
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function plainContent()
+    {
+        $this->headers['Content-Type'] = 'text/plain';
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function xmlContent()
+    {
+        $this->headers['Content-Type'] = 'application/xml';
+
+        return $this;
+    }
 }
