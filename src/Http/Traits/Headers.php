@@ -1,10 +1,10 @@
 <?php
 
-namespace Yang\Curl\Http;
+namespace Yang\Curl\Http\Traits;
 
 /**
  * Trait Headers
- * @package Yang\Curl\Http
+ * @package Yang\Curl\Http\Traits
  */
 trait Headers
 {

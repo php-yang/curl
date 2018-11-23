@@ -1,10 +1,12 @@
 <?php
 
-namespace Yang\Curl\Http;
+namespace Yang\Curl\Http\Traits;
+
+use Yang\Curl\Http\Response;
 
 /**
  * Trait Posters
- * @package Yang\Curl\Http
+ * @package Yang\Curl\Http\Traits
  */
 trait Posters
 {

@@ -2,6 +2,10 @@
 
 namespace Yang\Curl\Http;
 
+use Yang\Curl\Http\Traits\Headers;
+use Yang\Curl\Http\Traits\Options;
+use Yang\Curl\Http\Traits\Posters;
+
 /**
  * Class Client
  * @package Yang\Curl\Http

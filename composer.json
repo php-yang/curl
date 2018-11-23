@@ -10,9 +10,7 @@
     "type": "library",
     "require": {
         "php": ">=7.0.0",
-        "ext-curl": "*"
-    },
-    "suggest": {
+        "ext-curl": "*",
         "ext-json": "*"
     },
     "require-dev": {
