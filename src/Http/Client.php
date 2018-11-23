@@ -165,7 +165,7 @@ class Client
         $xml = '';
         foreach ($data as $k => $v) {
             if (is_array($v) || is_object($v)) {
-                $v = self::iBuildXml($v);
+                $v = static::iBuildXml($v);
             }
             $xml .= '<' . $k . '>' . $v . '</' . $k . '>';
         }
@@ -179,6 +179,6 @@ class Client
      */
     protected static function buildXml(array $data): string
     {
-        return '<xml>' . self::iBuildXml($data) . '</xml>';
+        return '<xml>' . static::iBuildXml($data) . '</xml>';
     }
 }
