@@ -1,0 +1,41 @@
+{
+    "name": "php-yang/curl",
+    "description": "Yang's curl library.",
+    "keywords": [
+        "php",
+        "yang",
+        "curl"
+    ],
+    "homepage": "http://github.com/php-yang/curl",
+    "type": "library",
+    "require": {
+        "php": ">=7.0.0",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "pengzhile",
+            "email": "pengzhile@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Yang\\Curl\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yang\\Curl\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
