@@ -29,6 +29,11 @@ class Response
     protected $body;
 
     /**
+     * @var array
+     */
+    protected $jsonCache;
+
+    /**
      * Response constructor.
      * @param int $status
      * @param string $reason
@@ -90,7 +95,7 @@ class Response
      */
     public function jsonDecodeBody(): array
     {
-        return json_decode($this->body, true);
+        return $this->jsonCache ?: $this->jsonCache = json_decode($this->body, true);
     }
 
     /**
