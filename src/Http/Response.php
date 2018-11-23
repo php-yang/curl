@@ -29,7 +29,7 @@ class Response
     protected $body;
 
     /**
-     * @var array
+     * @var mixed
      */
     protected $jsonCache;
 
@@ -91,9 +91,9 @@ class Response
     }
 
     /**
-     * @return array
+     * @return mixed
      */
-    public function jsonDecodeBody(): array
+    public function jsonDecodeBody()
     {
         return $this->jsonCache ?: $this->jsonCache = json_decode($this->body, true);
     }
