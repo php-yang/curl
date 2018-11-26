@@ -2,11 +2,13 @@
 
 namespace Yang\Curl\Http;
 
+use ArrayAccess;
+
 /**
  * Class Response
  * @package Yang\Curl\Http
  */
-class Response
+class Response implements ArrayAccess
 {
     /**
      * @var int
@@ -116,5 +118,41 @@ class Response
     public function __toString()
     {
         return $this->body;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function offsetExists($offset)
+    {
+        $data = $this->jsonDecodeBody();
+
+        return isset($data[$offset]);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function offsetGet($offset)
+    {
+        return $this->body($offset);
+    }
+
+    /**
+     * readonly
+     * @inheritdoc
+     */
+    public function offsetSet($offset, $value)
+    {
+        return;
+    }
+
+    /**
+     * readonly
+     * @inheritdoc
+     */
+    public function offsetUnset($offset)
+    {
+        return;
     }
 }
