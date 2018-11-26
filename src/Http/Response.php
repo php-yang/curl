@@ -91,6 +91,18 @@ class Response
     }
 
     /**
+     * @param string $key
+     * @param mixed $default
+     * @return mixed
+     */
+    public function body($key, $default = null)
+    {
+        $data = $this->jsonDecodeBody();
+
+        return $data[$key] ?? $default;
+    }
+
+    /**
      * @return mixed
      */
     public function jsonDecodeBody()
